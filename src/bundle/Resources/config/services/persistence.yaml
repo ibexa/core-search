@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Ibexa\CoreSearch\Repository\CriterionMapper:
+        arguments:
+            $mappers: !tagged_iterator ibexa.core_search.criterion_mapper
