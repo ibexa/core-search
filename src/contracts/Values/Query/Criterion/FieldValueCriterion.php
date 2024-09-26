@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Ibexa\Contracts\CoreSearch\Values\Query\Criterion;
 
-class FieldValueCriterion implements CriterionInterface
+final class FieldValueCriterion implements CriterionInterface
 {
     /** @final */
     public const COMPARISON_EQ = '=';

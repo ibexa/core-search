@@ -10,7 +10,7 @@ namespace Ibexa\Contracts\CoreSearch\Values\Query\SortClause;
 
 use Ibexa\Contracts\CoreSearch\Values\Query\AbstractSortClause;
 
-class FieldValueSortClause extends AbstractSortClause
+final class FieldValueSortClause extends AbstractSortClause
 {
     private string $field;
 

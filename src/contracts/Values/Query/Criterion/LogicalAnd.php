@@ -8,6 +8,6 @@ declare(strict_types=1);
 
 namespace Ibexa\Contracts\CoreSearch\Values\Query\Criterion;
 
-class LogicalAnd extends AbstractCompositeCriterion
+final class LogicalAnd extends AbstractCompositeCriterion
 {
 }
