@@ -10,7 +10,6 @@ namespace Ibexa\Contracts\CoreSearch\Values\Query;
 
 use Doctrine\Common\Collections\Expr\Expression;
 use Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface;
-use Ibexa\CoreSearch\Repository\CriterionMapper;
 
 /**
  * @template C of \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface

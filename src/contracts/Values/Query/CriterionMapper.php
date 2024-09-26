@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-namespace Ibexa\CoreSearch\Repository;
+namespace Ibexa\Contracts\CoreSearch\Values\Query;
 
 use Doctrine\Common\Collections\Expr\Expression;
 use Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface;
