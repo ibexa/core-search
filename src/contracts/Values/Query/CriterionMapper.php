@@ -14,10 +14,8 @@ use LogicException;
 
 /**
  * Converts Criterion instances into objects that underlying Handler can understand.
- *
- * @final
  */
-class CriterionMapper
+final class CriterionMapper
 {
     /**
      * @var iterable<\Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface<

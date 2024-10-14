@@ -8,10 +8,7 @@ declare(strict_types=1);
 
 namespace Ibexa\Contracts\CoreSearch\Values\Query;
 
-/**
- * @final
- */
-class SortDirection
+final class SortDirection
 {
     public const ASC = 'ascending';
     public const DESC = 'descending';

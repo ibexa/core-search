@@ -11,5 +11,3 @@ namespace Ibexa\Contracts\CoreSearch\Values\Query\Criterion;
 interface CriterionInterface
 {
 }
-
-class_alias(CriterionInterface::class, \Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\CriterionInterface::class);

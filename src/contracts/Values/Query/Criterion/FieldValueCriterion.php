@@ -83,5 +83,3 @@ class FieldValueCriterion implements CriterionInterface
         return $this->operator;
     }
 }
-
-class_alias(FieldValueCriterion::class, \Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\FieldValueCriterion::class);
