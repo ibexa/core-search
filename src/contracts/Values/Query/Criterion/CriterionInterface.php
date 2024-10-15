@@ -12,4 +12,4 @@ interface CriterionInterface
 {
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface::class, \Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\CriterionInterface::class);
+class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\CriterionInterface');

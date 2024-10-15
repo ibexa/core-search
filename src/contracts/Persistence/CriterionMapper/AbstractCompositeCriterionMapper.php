@@ -60,4 +60,4 @@ abstract class AbstractCompositeCriterionMapper implements CriterionMapperInterf
     }
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper\AbstractCompositeCriterionMapper::class, \Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractCompositeCriterionMapper::class);
+class_alias(\Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper\AbstractCompositeCriterionMapper::class, '\Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractCompositeCriterionMapper');

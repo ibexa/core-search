@@ -12,4 +12,4 @@ class LogicalAnd extends AbstractCompositeCriterion
 {
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\LogicalAnd::class, \Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\LogicalAnd::class);
+class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\LogicalAnd::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\LogicalAnd');

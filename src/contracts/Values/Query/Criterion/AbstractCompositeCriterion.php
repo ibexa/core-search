@@ -50,4 +50,4 @@ abstract class AbstractCompositeCriterion implements CriterionInterface
     }
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\AbstractCompositeCriterion::class, \Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\AbstractCompositeCriterion::class);
+class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\AbstractCompositeCriterion::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\AbstractCompositeCriterion');

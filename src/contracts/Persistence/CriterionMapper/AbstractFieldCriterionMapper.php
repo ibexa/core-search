@@ -88,4 +88,4 @@ abstract class AbstractFieldCriterionMapper implements CriterionMapperInterface
     }
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper\AbstractFieldCriterionMapper::class, \Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractFieldCriterionMapper::class);
+class_alias(\Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper\AbstractFieldCriterionMapper::class, '\Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractFieldCriterionMapper');
