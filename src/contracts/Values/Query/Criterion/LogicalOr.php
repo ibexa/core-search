@@ -11,3 +11,5 @@ namespace Ibexa\Contracts\CoreSearch\Values\Query\Criterion;
 class LogicalOr extends AbstractCompositeCriterion
 {
 }
+
+class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\LogicalOr::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\LogicalOr');
