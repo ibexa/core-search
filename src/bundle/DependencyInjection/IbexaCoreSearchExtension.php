@@ -20,6 +20,8 @@ final class IbexaCoreSearchExtension extends Extension implements PrependExtensi
 {
     /**
      * @param array<string, mixed> $configs
+     *
+     * @throws \Exception
      */
     public function load(array $configs, ContainerBuilder $container): void
     {

@@ -19,7 +19,7 @@ interface CriterionMapperInterface
     public function canHandle(CriterionInterface $criterion): bool;
 
     /**
-     * @param C $criterion
+     * @phpstan-param C $criterion
      */
     public function handle(CriterionInterface $criterion, CriterionMapper $mapper): Expression;
 }

@@ -79,10 +79,7 @@ abstract class AbstractFieldCriterionMapper implements CriterionMapperInterface
         ));
     }
 
-    /**
-     * @return mixed
-     */
-    protected function getComparisonValue(FieldValueCriterion $criterion)
+    protected function getComparisonValue(FieldValueCriterion $criterion): mixed
     {
         return $criterion->getValue();
     }
