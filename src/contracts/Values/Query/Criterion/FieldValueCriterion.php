@@ -11,34 +11,33 @@ namespace Ibexa\Contracts\CoreSearch\Values\Query\Criterion;
 class FieldValueCriterion implements CriterionInterface
 {
     /** @final */
-    public const COMPARISON_EQ = '=';
+    public const string COMPARISON_EQ = '=';
     /** @final */
-    public const COMPARISON_NEQ = '<>';
+    public const string COMPARISON_NEQ = '<>';
     /** @final */
-    public const COMPARISON_LT = '<';
+    public const string COMPARISON_LT = '<';
     /** @final */
-    public const COMPARISON_LTE = '<=';
+    public const string COMPARISON_LTE = '<=';
     /** @final */
-    public const COMPARISON_GT = '>';
+    public const string COMPARISON_GT = '>';
     /** @final */
-    public const COMPARISON_GTE = '>=';
+    public const string COMPARISON_GTE = '>=';
     /** @final */
-    public const COMPARISON_IN = 'IN';
+    public const string COMPARISON_IN = 'IN';
     /** @final */
-    public const COMPARISON_NIN = 'NIN';
+    public const string COMPARISON_NIN = 'NIN';
     /** @final */
-    public const COMPARISON_CONTAINS = 'CONTAINS';
+    public const string COMPARISON_CONTAINS = 'CONTAINS';
     /** @final */
-    public const COMPARISON_MEMBER_OF = 'MEMBER_OF';
+    public const string COMPARISON_MEMBER_OF = 'MEMBER_OF';
     /** @final */
-    public const COMPARISON_STARTS_WITH = 'STARTS_WITH';
+    public const string COMPARISON_STARTS_WITH = 'STARTS_WITH';
     /** @final */
-    public const COMPARISON_ENDS_WITH = 'ENDS_WITH';
+    public const string COMPARISON_ENDS_WITH = 'ENDS_WITH';
 
     private string $field;
 
-    /** @var mixed */
-    private $value;
+    private mixed $value;
 
     private string $operator;
 
@@ -57,18 +56,12 @@ class FieldValueCriterion implements CriterionInterface
         return $this->field;
     }
 
-    /**
-     * @param mixed $value
-     */
-    public function setValue($value): void
+    public function setValue(mixed $value): void
     {
         $this->value = $value;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getValue()
+    public function getValue(): mixed
     {
         return $this->value;
     }

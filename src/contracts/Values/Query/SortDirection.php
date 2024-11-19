@@ -13,8 +13,8 @@ namespace Ibexa\Contracts\CoreSearch\Values\Query;
  */
 class SortDirection
 {
-    public const ASC = 'ascending';
-    public const DESC = 'descending';
+    public const string ASC = 'ascending';
+    public const string DESC = 'descending';
 
     /**
      * @phpstan-assert-if-true self::ASC|self::DESC $value
