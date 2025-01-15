@@ -23,6 +23,7 @@ abstract class AbstractCriterionQuery
 
     /**
      * @var array<int, AbstractSortClause>
+     *
      * @phpstan-var TSortClause[]
      */
     private array $sortClauses;
@@ -33,6 +34,7 @@ abstract class AbstractCriterionQuery
 
     /**
      * @param array<int, AbstractSortClause>|null $sortClauses
+     *
      * @phpstan-param TSortClause[]|null $sortClauses
      * @phpstan-param TCriterion|null $query
      */
@@ -91,6 +93,7 @@ abstract class AbstractCriterionQuery
 
     /**
      * @return array<int, AbstractSortClause>
+     *
      * @phpstan-return TSortClause[]
      */
     final public function getSortClauses(): array
@@ -108,6 +111,7 @@ abstract class AbstractCriterionQuery
 
     /**
      * @param array<int, AbstractSortClause> $sortClauses
+     *
      * @phpstan-param TSortClause[] $sortClauses
      */
     final public function setSortClauses(array $sortClauses): void
