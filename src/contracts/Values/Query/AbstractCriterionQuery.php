@@ -18,10 +18,10 @@ abstract class AbstractCriterionQuery
 {
     public const DEFAULT_LIMIT = 25;
 
-    /** @var TCriterion|null */
+    /** @phpstan-var TCriterion|null */
     private ?CriterionInterface $query;
 
-    /** @var TSortClause[] */
+    /** @phpstan-var TSortClause[] */
     private array $sortClauses;
 
     private ?int $limit;
@@ -29,8 +29,9 @@ abstract class AbstractCriterionQuery
     private int $offset;
 
     /**
-     * @param TSortClause[]|null $sortClauses
-     * @param TCriterion|null $query
+     * @param array<int, AbstractSortClause>|null $sortClauses
+     * @phpstan-param TSortClause[]|null $sortClauses
+     * @phpstan-param TCriterion|null $query
      */
     public function __construct(
         ?CriterionInterface $query = null,
@@ -45,7 +46,7 @@ abstract class AbstractCriterionQuery
     }
 
     /**
-     * @param TCriterion|null $criterion
+     * @phpstan-param TCriterion|null $criterion
      */
     final public function setQuery(?CriterionInterface $criterion): void
     {
@@ -53,7 +54,7 @@ abstract class AbstractCriterionQuery
     }
 
     /**
-     * @return TCriterion|null
+     * @phpstan-return TCriterion|null
      */
     final public function getQuery(): ?CriterionInterface
     {
@@ -86,7 +87,8 @@ abstract class AbstractCriterionQuery
     }
 
     /**
-     * @return TSortClause[]
+     * @return array<int, AbstractSortClause>
+     * @phpstan-return TSortClause[]
      */
     final public function getSortClauses(): array
     {
@@ -102,6 +104,7 @@ abstract class AbstractCriterionQuery
     }
 
     /**
+     * @param array<int, AbstractSortClause>
      * @phpstan-param TSortClause[] $sortClauses
      */
     final public function setSortClauses(array $sortClauses): void
