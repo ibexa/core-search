@@ -107,7 +107,7 @@ abstract class AbstractCriterionQuery
     }
 
     /**
-     * @param array<int, AbstractSortClause>
+     * @param array<int, AbstractSortClause> $sortClauses
      * @phpstan-param TSortClause[] $sortClauses
      */
     final public function setSortClauses(array $sortClauses): void
