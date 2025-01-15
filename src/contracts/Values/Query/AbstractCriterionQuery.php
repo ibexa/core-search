@@ -21,7 +21,10 @@ abstract class AbstractCriterionQuery
     /** @phpstan-var TCriterion|null */
     private ?CriterionInterface $query;
 
-    /** @phpstan-var TSortClause[] */
+    /**
+     * @var array<int, AbstractSortClause>
+     * @phpstan-var TSortClause[]
+     */
     private array $sortClauses;
 
     private ?int $limit;
