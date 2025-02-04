@@ -13,10 +13,10 @@ use InvalidArgumentException;
 abstract class AbstractSortClause
 {
     /** @final */
-    public const SORT_ASC = SortDirection::ASC;
+    public const string SORT_ASC = SortDirection::ASC;
 
     /** @final */
-    public const SORT_DESC = SortDirection::DESC;
+    public const string SORT_DESC = SortDirection::DESC;
 
     /**
      * Sort direction.

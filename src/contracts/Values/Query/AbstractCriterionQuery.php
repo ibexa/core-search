@@ -16,7 +16,7 @@ use Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface;
  */
 abstract class AbstractCriterionQuery
 {
-    public const DEFAULT_LIMIT = 25;
+    public const int DEFAULT_LIMIT = 25;
 
     /** @phpstan-var TCriterion|null */
     private ?CriterionInterface $query;
