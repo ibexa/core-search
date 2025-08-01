@@ -14,26 +14,16 @@ use LogicException;
 
 /**
  * Converts Criterion instances into objects that underlying Handler can understand.
- *
- * @final
  */
-class CriterionMapper
+final readonly class CriterionMapper
 {
-    /**
-     * @var iterable<\Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface<
-     *     \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface,
-     * >>
-     */
-    private iterable $mappers;
-
     /**
      * @phpstan-param iterable<\Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface<
      *     \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface,
      * >> $mappers
      */
-    public function __construct(iterable $mappers)
+    public function __construct(private iterable $mappers)
     {
-        $this->mappers = $mappers;
     }
 
     public function handle(CriterionInterface $criterion): Expression

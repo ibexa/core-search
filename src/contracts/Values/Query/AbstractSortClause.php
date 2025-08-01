@@ -31,7 +31,7 @@ abstract class AbstractSortClause
      * @param string $sortDirection one of SortDirection::ASC or SortDirection::DESC
      */
     public function __construct(
-        string $sortDirection = self::SORT_ASC
+        readonly string $sortDirection = self::SORT_ASC
     ) {
         $this->setDirection($sortDirection);
     }
