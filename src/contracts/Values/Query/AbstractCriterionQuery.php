@@ -18,19 +18,12 @@ abstract class AbstractCriterionQuery
 {
     public const int DEFAULT_LIMIT = 25;
 
-    /** @phpstan-var TCriterion|null */
-    private ?CriterionInterface $query;
-
     /**
      * @var array<int, AbstractSortClause>
      *
      * @phpstan-var TSortClause[]
      */
     private array $sortClauses;
-
-    private ?int $limit;
-
-    private int $offset;
 
     /**
      * @param array<int, AbstractSortClause>|null $sortClauses
@@ -39,15 +32,12 @@ abstract class AbstractCriterionQuery
      * @phpstan-param TCriterion|null $query
      */
     public function __construct(
-        ?CriterionInterface $query = null,
+        private ?CriterionInterface $query = null,
         ?array $sortClauses = [],
-        ?int $limit = self::DEFAULT_LIMIT,
-        int $offset = 0
+        private ?int $limit = self::DEFAULT_LIMIT,
+        private int $offset = 0
     ) {
-        $this->query = $query;
         $this->sortClauses = $sortClauses ?? [];
-        $this->offset = $offset;
-        $this->limit = $limit;
     }
 
     /**

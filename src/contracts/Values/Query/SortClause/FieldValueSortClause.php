@@ -12,13 +12,11 @@ use Ibexa\Contracts\CoreSearch\Values\Query\AbstractSortClause;
 
 class FieldValueSortClause extends AbstractSortClause
 {
-    private string $field;
-
-    public function __construct(string $field, string $sortDirection = self::SORT_ASC)
-    {
+    public function __construct(
+        private readonly string $field,
+        string $sortDirection = self::SORT_ASC
+    ) {
         parent::__construct($sortDirection);
-
-        $this->field = $field;
     }
 
     public function getField(): string

@@ -84,5 +84,3 @@ abstract class AbstractFieldCriterionMapper implements CriterionMapperInterface
         return $criterion->getValue();
     }
 }
-
-class_alias(\Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper\AbstractFieldCriterionMapper::class, '\Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractFieldCriterionMapper');
