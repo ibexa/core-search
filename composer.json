@@ -16,6 +16,7 @@
         "symfony/yaml": "^7.3"
     },
     "require-dev": {
+        "deptrac/deptrac": "^4.2",
         "ibexa/behat": "~5.0.x-dev",
         "ibexa/code-style": "~2.0.0",
         "ibexa/doctrine-schema": "~5.0.x-dev",
@@ -23,8 +24,7 @@
         "phpstan/phpstan": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
         "phpstan/phpstan-symfony": "^2.0",
-        "phpunit/phpunit": "^9.0",
-        "qossmic/deptrac-shim": "^0.24.0 || ^1.0.2"
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
@@ -45,7 +45,7 @@
         "check-cs": "@fix-cs --dry-run",
         "test": "phpunit -c phpunit.xml.dist",
         "phpstan": "phpstan analyse -c phpstan.neon",
-        "deptrac": "php vendor/bin/deptrac analyse"
+        "deptrac": "deptrac analyse"
     },
     "scripts-descriptions": {
         "fix-cs": "Automatically fixes code style in all files",
