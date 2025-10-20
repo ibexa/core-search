@@ -14,5 +14,4 @@ jobs:
         with:
             project-edition: 'oss'
             test-suite:  '--profile=browser --suite=core-search --config=vendor/ibexa/core-search/behat_suites.yaml'
-        secrets:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        secrets: inherit

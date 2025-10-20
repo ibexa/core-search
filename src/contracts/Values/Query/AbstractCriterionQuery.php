@@ -14,7 +14,7 @@ use Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface;
  * @template TSortClause of \Ibexa\Contracts\CoreSearch\Values\Query\AbstractSortClause
  * @template TCriterion of \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface
  */
-abstract class AbstractCriterionQuery
+abstract class AbstractCriterionQuery implements PaginationAwareInterface
 {
     public const int DEFAULT_LIMIT = 25;
 
