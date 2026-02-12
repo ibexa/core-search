@@ -11,15 +11,3 @@ parameters:
 			identifier: instanceof.alwaysTrue
 			count: 1
 			path: src/contracts/Persistence/CriterionMapper/AbstractFieldCriterionMapper.php
-
-		-
-			message: '#^Method Ibexa\\CoreSearch\\CriterionMapper\\LogicalAndCriterionMapper\:\:getType\(\) never returns ''OR'' so it can be removed from the return type\.$#'
-			identifier: return.unusedType
-			count: 1
-			path: src/lib/CriterionMapper/LogicalAndCriterionMapper.php
-
-		-
-			message: '#^Method Ibexa\\CoreSearch\\CriterionMapper\\LogicalOrCriterionMapper\:\:getType\(\) never returns ''AND'' so it can be removed from the return type\.$#'
-			identifier: return.unusedType
-			count: 1
-			path: src/lib/CriterionMapper/LogicalOrCriterionMapper.php
