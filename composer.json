@@ -7,7 +7,7 @@
     ],
     "require": {
         "php": "^7.4 || ^8.0",
-        "ibexa/core": "~4.6.x-dev",
+        "ibexa/core": "~4.6",
         "symfony/config": "^5.4",
         "symfony/dependency-injection": "^5.4",
         "symfony/event-dispatcher": "^5.4",
@@ -17,7 +17,7 @@
         "symfony/yaml": "^5.4"
     },
     "require-dev": {
-        "ibexa/behat": "~4.6.x-dev",
+        "ibexa/behat": "~4.6",
         "ibexa/code-style": "~2.0.0",
         "phpstan/phpstan": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
