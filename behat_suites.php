@@ -13,7 +13,7 @@ use Ibexa\Behat\API\Context\TestContext;
 use Ibexa\Behat\Browser\Context\AuthenticationContext;
 
 return (new Config())
-    ->import('../../ibexa/behat/behat_ibexa_oss.yaml')
+    ->import('../../ibexa/behat/behat_ibexa_oss.php')
     ->withProfile((new Profile('browser'))
         ->withSuite((new Suite('core-search'))
             ->withContexts(
