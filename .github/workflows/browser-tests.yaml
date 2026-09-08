@@ -13,5 +13,5 @@ jobs:
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
             project-edition: 'oss'
-            test-suite:  '--profile=browser --suite=core-search --config=vendor/ibexa/core-search/behat_suites.yaml'
+            test-suite:  '--profile=browser --suite=core-search --config=vendor/ibexa/core-search/behat_suites.php'
         secrets: inherit
