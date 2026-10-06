@@ -51,6 +51,7 @@ final class IbexaCoreSearchExtension extends Extension implements PrependExtensi
 
         $container->addResource(new FileResource($configFile));
 
+        /** @var array<string, array<string, mixed>> $configs */
         $configs = Yaml::parseFile($configFile, Yaml::PARSE_CONSTANT) ?? [];
         foreach ($configs as $name => $config) {
             $container->prependExtensionConfig($name, $config);
