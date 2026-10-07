@@ -24,8 +24,8 @@ abstract class AbstractFieldCriterionMapper implements CriterionMapperInterface
 {
     /**
      * @var array<
-     *     \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\FieldValueCriterion::COMPARISON_*,
-     *     \Doctrine\Common\Collections\Expr\Comparison::*
+     *     FieldValueCriterion::COMPARISON_*,
+     *     Comparison::*
      * >
      */
     private static array $comparisonMap = [
@@ -46,8 +46,10 @@ abstract class AbstractFieldCriterionMapper implements CriterionMapperInterface
     /**
      * @phpstan-param T $criterion
      */
-    final public function handle(CriterionInterface $criterion, CriterionMapper $mapper): Comparison
-    {
+    final public function handle(
+        CriterionInterface $criterion,
+        CriterionMapper $mapper
+    ): Comparison {
         assert($criterion instanceof FieldValueCriterion);
 
         return new Comparison(
@@ -63,7 +65,7 @@ abstract class AbstractFieldCriterionMapper implements CriterionMapperInterface
     }
 
     /**
-     * @phpstan-return \Doctrine\Common\Collections\Expr\Comparison::*
+     * @phpstan-return Comparison::*
      */
     protected function getComparisonOperator(FieldValueCriterion $criterion): string
     {
@@ -88,4 +90,4 @@ abstract class AbstractFieldCriterionMapper implements CriterionMapperInterface
     }
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper\AbstractFieldCriterionMapper::class, '\Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractFieldCriterionMapper');
+class_alias(AbstractFieldCriterionMapper::class, '\Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractFieldCriterionMapper');
