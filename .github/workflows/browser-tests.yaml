@@ -11,6 +11,7 @@ jobs:
         name: "Browser tests"
         uses: ibexa/gh-workflows/.github/workflows/browser-tests.yml@main
         with:
+            php-image: 'ghcr.io/ibexa/docker/php:8.5-node22'
             project-edition: 'oss'
             test-suite:  '--profile=browser --suite=core-search --config=vendor/ibexa/core-search/behat_suites.php'
         secrets: inherit
