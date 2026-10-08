@@ -10,6 +10,4 @@ namespace Ibexa\Bundle\CoreSearch;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class IbexaCoreSearchBundle extends Bundle
-{
-}
+final class IbexaCoreSearchBundle extends Bundle {}

@@ -10,7 +10,7 @@ namespace Ibexa\Contracts\CoreSearch\Values\Query\Criterion;
 
 abstract class AbstractCompositeCriterion implements CriterionInterface
 {
-    /** @var array<\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface> */
+    /** @var array<CriterionInterface> */
     private array $criteria;
 
     public function __construct(CriterionInterface ...$criteria)
@@ -42,7 +42,7 @@ abstract class AbstractCompositeCriterion implements CriterionInterface
     }
 
     /**
-     * @return array<\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface>
+     * @return array<CriterionInterface>
      */
     final public function getCriteria(): array
     {
@@ -50,4 +50,4 @@ abstract class AbstractCompositeCriterion implements CriterionInterface
     }
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\AbstractCompositeCriterion::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\AbstractCompositeCriterion');
+class_alias(AbstractCompositeCriterion::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\AbstractCompositeCriterion');

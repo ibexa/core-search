@@ -45,8 +45,11 @@ class FieldValueCriterion implements CriterionInterface
     /**
      * @param mixed $value
      */
-    public function __construct(string $field, $value, ?string $operator = null)
-    {
+    public function __construct(
+        string $field,
+        $value,
+        ?string $operator = null
+    ) {
         $this->field = $field;
         $this->value = $value;
         $this->operator = $operator ?? (is_array($value) ? self::COMPARISON_IN : self::COMPARISON_EQ);
@@ -84,4 +87,4 @@ class FieldValueCriterion implements CriterionInterface
     }
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\FieldValueCriterion::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\FieldValueCriterion');
+class_alias(FieldValueCriterion::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\FieldValueCriterion');
