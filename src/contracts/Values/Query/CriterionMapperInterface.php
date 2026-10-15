@@ -21,5 +21,8 @@ interface CriterionMapperInterface
     /**
      * @phpstan-param C $criterion
      */
-    public function handle(CriterionInterface $criterion, CriterionMapper $mapper): Expression;
+    public function handle(
+        CriterionInterface $criterion,
+        CriterionMapper $mapper
+    ): Expression;
 }

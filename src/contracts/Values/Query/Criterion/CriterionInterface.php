@@ -8,8 +8,6 @@ declare(strict_types=1);
 
 namespace Ibexa\Contracts\CoreSearch\Values\Query\Criterion;
 
-interface CriterionInterface
-{
-}
+interface CriterionInterface {}
 
-class_alias(\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\CriterionInterface');
+class_alias(CriterionInterface::class, '\Ibexa\Contracts\ProductCatalog\Values\Common\Query\Criterion\CriterionInterface');

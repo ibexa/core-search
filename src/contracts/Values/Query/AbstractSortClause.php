@@ -42,7 +42,7 @@ abstract class AbstractSortClause
     }
 
     /**
-     * @throws \InvalidArgumentException if the given sort direction is invalid
+     * @throws InvalidArgumentException if the given sort direction is invalid
      */
     final public function setDirection(string $direction): void
     {

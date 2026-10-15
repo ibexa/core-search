@@ -18,13 +18,11 @@ use LogicException;
 final readonly class CriterionMapper
 {
     /**
-     * @phpstan-param iterable<\Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface<
-     *     \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface,
+     * @phpstan-param iterable<CriterionMapperInterface<
+     *     CriterionInterface,
      * >> $mappers
      */
-    public function __construct(private iterable $mappers)
-    {
-    }
+    public function __construct(private iterable $mappers) {}
 
     public function handle(CriterionInterface $criterion): Expression
     {
