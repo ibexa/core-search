@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper;
 
 use Doctrine\Common\Collections\Expr\CompositeExpression;
+use Doctrine\Common\Collections\Expr\Expression;
+use Ibexa\Contracts\CoreSearch\Values\Query\Criterion\AbstractCompositeCriterion;
 use Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface;
 use Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapper;
 use Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface;
@@ -21,12 +23,12 @@ use Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface;
 abstract class AbstractCompositeCriterionMapper implements CriterionMapperInterface
 {
     /**
-     * @return class-string<\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\AbstractCompositeCriterion>
+     * @return class-string<AbstractCompositeCriterion>
      */
     abstract protected function getHandledClass(): string;
 
     /**
-     * @phpstan-return \Doctrine\Common\Collections\Expr\CompositeExpression::TYPE_*
+     * @phpstan-return CompositeExpression::TYPE_*
      */
     abstract protected function getType(): string;
 
@@ -37,20 +39,24 @@ abstract class AbstractCompositeCriterionMapper implements CriterionMapperInterf
         return $criterion instanceof $handledClass;
     }
 
-    final public function handle(CriterionInterface $criterion, CriterionMapper $mapper): CompositeExpression
-    {
+    final public function handle(
+        CriterionInterface $criterion,
+        CriterionMapper $mapper
+    ): CompositeExpression {
         $expressions = $this->getExpressions($criterion->getCriteria(), $mapper);
 
         return new CompositeExpression($this->getType(), $expressions);
     }
 
     /**
-     * @param iterable<\Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface> $criteria
+     * @param iterable<CriterionInterface> $criteria
      *
-     * @return array<\Doctrine\Common\Collections\Expr\Expression>
+     * @return array<Expression>
      */
-    private function getExpressions(iterable $criteria, CriterionMapper $mapper): array
-    {
+    private function getExpressions(
+        iterable $criteria,
+        CriterionMapper $mapper
+    ): array {
         $expressions = [];
         foreach ($criteria as $criterion) {
             $expressions[] = $mapper->handle($criterion);
@@ -60,4 +66,4 @@ abstract class AbstractCompositeCriterionMapper implements CriterionMapperInterf
     }
 }
 
-class_alias(\Ibexa\Contracts\CoreSearch\Persistence\CriterionMapper\AbstractCompositeCriterionMapper::class, '\Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractCompositeCriterionMapper');
+class_alias(AbstractCompositeCriterionMapper::class, '\Ibexa\ProductCatalog\Local\Persistence\Legacy\Common\CriterionMapper\AbstractCompositeCriterionMapper');

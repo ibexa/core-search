@@ -20,15 +20,15 @@ use LogicException;
 class CriterionMapper
 {
     /**
-     * @var iterable<\Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface<
-     *     \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface,
+     * @var iterable<CriterionMapperInterface<
+     *     CriterionInterface,
      * >>
      */
     private iterable $mappers;
 
     /**
-     * @phpstan-param iterable<\Ibexa\Contracts\CoreSearch\Values\Query\CriterionMapperInterface<
-     *     \Ibexa\Contracts\CoreSearch\Values\Query\Criterion\CriterionInterface,
+     * @phpstan-param iterable<CriterionMapperInterface<
+     *     CriterionInterface,
      * >> $mappers
      */
     public function __construct(iterable $mappers)
