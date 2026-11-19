@@ -3,13 +3,25 @@ name: Frontend build
 on:
     push:
         paths:
+            - "**.cjs"
+            - "**.mjs"
             - "**.js"
+            - "**.jsx"
+            - "**.ts"
+            - "**.tsx"
+            - "**.scss"
             - "package.json"
         branches:
             - '[0-9]+.[0-9]+'
     pull_request:
         paths:
+            - "**.cjs"
+            - "**.mjs"
             - "**.js"
+            - "**.jsx"
+            - "**.ts"
+            - "**.tsx"
+            - "**.scss"
             - "package.json"
 
 jobs:
